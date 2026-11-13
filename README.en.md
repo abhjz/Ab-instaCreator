@@ -22,14 +22,42 @@ Works in **Claude Code** and **Codex**. It never posts to Instagram for you.
 
 ## Colors: 60/30/10 palettes
 
-Not sure which colors go together? The plugin bundles the **`palette-603010`** skill: nine tested palettes (base 60% · support 30% · accent 10%) with exact hex codes, pairing rules and a contrast checker.
+**The problem:** random colors look amateur, and light text on a light background is unreadable.
+
+**The fix:** the plugin bundles the **`palette-603010`** skill: nine tested palettes that follow the 60/30/10 rule, with exact hex codes, pairing rules and a contrast checker.
+
+| Share | Role | What it colors in a post |
+|---|---|---|
+| **60%** | Base | the background and large surfaces: sets the mood |
+| **30%** | Support | the product backdrop, panels, cards and main text |
+| **10%** | Accent | **ONE** focal thing: a headline word, the call-to-action, a glow |
 
 ![Nine 60/30/10 palettes](docs/palettes.png)
 
-- **Your brand colors win.** If you gave a palette, it is used (`background` = 60% base, `surface` = 30% support, `accent` = 10% accent).
-- **No palette?** The assistant proposes 2–3 that fit the product and style, with hex codes and why the accent works. Ask any time: `/ab-instacreator:insta-palette warm gift box, Arabic text` (Codex: "Use $palette-603010 …").
-- **Different options get different palettes**, so options differ in color as well as style.
-- **Contrast is checked before you see a design** (`scripts/contrast.py`): body text ≥ 4.5:1, headlines 3–4.5, below 3 only shapes. The review page shows each design's palette swatches.
+| Palette | Mood | 60% base | 30% support | 10% accent |
+|---|---|---|---|---|
+| **Sky Fresh** | light, clean, skincare | `#52C5FF` | `#FFFFFF` | `#FF1088` |
+| **Petrol Gaming** | dark, premium, gaming | `#062C30` | `#E5D4B8` | `#FF4E00` |
+| **Monochrome Brown** | warm, classic, fashion | `#3D231A` | `#F3EBDD` | `#00F0FF` |
+| **Teal Brand** | dark, corporate-bold | `#0B434C` | `#FFFFFF` | `#FF5533` |
+| **Midnight Neon** | dark, tech, games | `#0A0A0A` | `#FFFFFF` | `#55FF00` |
+| **Navy Idea** | dark, serious, marketing | `#031326` | `#FFFFFF` | `#D100D1` |
+| **Mauve Loud** | warm, bold, playful | `#913768` | `#C29A74` | `#FDD001` |
+| **Olive Standout** | warm, natural, earthy | `#778A3F` | `#6E4B2C` | `#F16619` |
+| **Brick Hook** | warm, confident | `#C15B46` | `#ABA6A3` | `#45DBE1` |
+
+### How to use it
+- **Automatic:** when you create a design, the assistant picks colors in a dedicated step. Your brand palette comes first (`background` = 60% base, `surface` = 30% support, `accent` = 10% accent). With no brand palette it proposes 2–3 that fit the product and style.
+- **Ask directly:** `/ab-instacreator:insta-palette warm gift box, Arabic text` (Claude Code) or "Use $palette-603010 to suggest colors for this design" (Codex). You get hex codes with roles, why each accent works, and which text pairs are safe.
+- **Several options?** Each option gets a different palette, so options differ in color as well as style.
+- **Checked before you see it:** every text pair is contrast-checked, and the review page shows each design's palette swatches. A per-style table of suggested palettes is in [`color.md`](skills/insta-creator/references/color.md).
+
+### Pairing rules in 30 seconds
+- The accent is the **opposite hue** of the base (blue↔pink, teal↔orange, brown↔cyan, navy↔purple).
+- **Bright bases** (sky blue, yellow, neon green) can't carry white text: use near-black or the darkest palette color.
+- **Neon accents** only on dark bases; on white or beige they wash out.
+- Don't spread the accent: if it appears everywhere, nothing is the focal point.
+- Contrast numbers: **4.5 or more** = body text OK · **3 to 4.5** = big bold headlines only · **under 3** = shapes and glows only, never text. Check any pair yourself: `python3 skills/palette-603010/scripts/contrast.py "#FFFFFF" "#062C30"`.
 
 ## Gallery
 
