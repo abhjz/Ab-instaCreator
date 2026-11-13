@@ -4,7 +4,7 @@
 
 Works in **Claude Code** and **Codex**. It never posts to Instagram for you.
 
-![Ab-instaCreator](docs/banner.svg)
+![Ab-instaCreator](docs/banner.png)
 
 ## What it creates
 

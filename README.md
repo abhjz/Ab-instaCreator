@@ -4,7 +4,7 @@
 
 يعمل مع **Claude Code** و**Codex**. لا ينشر على انستقرام نيابةً عنك.
 
-![Ab-instaCreator](docs/banner.svg)
+![Ab-instaCreator](docs/banner.png)
 
 [English guide](README.en.md) · [دليل الستايلات](skills/insta-creator/references/styles.md) · [أنماط التخطيط](skills/insta-creator/references/layout-patterns.md) · [سجل التغييرات](CHANGELOG.md)
 
