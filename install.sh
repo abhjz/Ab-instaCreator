@@ -1,13 +1,12 @@
 #!/usr/bin/env bash
 # Usage: ./install.sh [claude|codex|all]   (default: all)
 # Codex target: $CODEX_SKILLS_DIR (default ~/.agents/skills; older setups may use ~/.codex/skills).
-# Copies the skill into the host's skills folder. Claude can alternatively load the whole
+# Copies every skill under skills/ (insta-creator, palette-603010) into the host's skills folder. Claude can alternatively load the whole
 # repo as a plugin: claude --plugin-dir <this folder>
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")" && pwd)"
-SRC="$ROOT/skills/insta-creator"
 TARGET="${1:-all}"
-put(){ mkdir -p "$1"; rm -rf "$1/insta-creator"; cp -R "$SRC" "$1/insta-creator"; echo "Installed -> $1/insta-creator"; }
+put(){ mkdir -p "$1"; for d in "$ROOT"/skills/*/; do n="$(basename "$d")"; rm -rf "$1/$n"; cp -R "$d" "$1/$n"; echo "Installed -> $1/$n"; done; }
 case "$TARGET" in
   claude) put "${CLAUDE_HOME:-$HOME/.claude}/skills" ;;
   codex)  put "${CODEX_SKILLS_DIR:-$HOME/.agents/skills}" ;;

@@ -1,0 +1,6 @@
+interface:
+  display_name: Palette 60-30-10
+  short_description: Pick tested 60/30/10 color palettes and check contrast
+  default_prompt: Use $palette-603010 to suggest color palettes for this design and check text contrast.
+policy:
+  allow_implicit_invocation: true

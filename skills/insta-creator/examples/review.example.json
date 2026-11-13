@@ -8,7 +8,12 @@
       "style": "Glassmorphism",
       "version": "v1",
       "status": "Demo",
-      "path": "../templates/scene.html"
+      "path": "../templates/scene.html",
+      "palette": {
+        "base": "#062C30",
+        "support": "#E5D4B8",
+        "accent": "#FF4E00"
+      }
     },
     {
       "id": "poll-demo",
@@ -17,7 +22,12 @@
       "style": "Minimalism",
       "version": "v1",
       "status": "Demo",
-      "path": "../templates/story.html"
+      "path": "../templates/story.html",
+      "palette": {
+        "base": "#0A0A0A",
+        "support": "#FFFFFF",
+        "accent": "#55FF00"
+      }
     }
   ]
 }

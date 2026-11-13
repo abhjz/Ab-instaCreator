@@ -1,4 +1,10 @@
 # Changelog
+## 0.3.0 · 2026-11-14
+- New bundled skill palette-603010: nine tested 60/30/10 palettes, palettes.json and a WCAG contrast checker (scripts/contrast.py)
+- insta-creator now has a color step (references/color.md): brand palette first, otherwise proposes palettes per option, contrast check before review
+- Review page shows each design's palette swatches; new /insta-palette command; install.sh installs every skill
+- Palette sheet image and README section (EN + AR)
+
 ## 0.2.2 · 2026-11-13
 - Repository is now public: removed private-repo notes from install docs
 

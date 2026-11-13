@@ -5,6 +5,7 @@ if(!pw)throw Error('Playwright not found; run skills/insta-creator/scripts/setup
 const fs=require('fs');
 (async()=>{const b=await pw.chromium.launch();
 for(const f of fs.readdirSync(path.join(__dirname,'_html')).filter(f=>f.endsWith('.html'))){
+ if(f==='palettes.html'){const q=await b.newPage({viewport:{width:1600,height:1000}});await q.goto('file://'+path.join(__dirname,'_html',f));await q.screenshot({path:path.join(__dirname,'..','palettes.png'),fullPage:true});await q.close();continue}
  const story=f.startsWith('story-');const w=story?1080:2160,h=story?1920:1440,s=story?0.4:0.5;
  const p=await b.newPage({viewport:{width:w,height:h},deviceScaleFactor:s});
  await p.goto('file://'+path.join(__dirname,'_html',f));await p.evaluate(()=>document.fonts.ready);

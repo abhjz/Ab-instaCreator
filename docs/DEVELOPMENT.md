@@ -14,3 +14,5 @@ Before a release, review the publication file list. Keep private brand files, wo
 Layout guidance lives in `skills/insta-creator/references/layout-patterns.md`. License: MIT (Raleway under OFL 1.1, see NOTICE.md).
 
 Releases and versioning: see `docs/RELEASING.md` (`tools/bump_version.py` bumps plugin.json, package.json and the changelog together).
+
+Skills: `skills/insta-creator` (workflow) and `skills/palette-603010` (60/30/10 palettes, `palettes.json`, `scripts/contrast.py`). `install.sh` installs every folder under `skills/`. Palette sheet: `python3 docs/examples/build_palettes.py && node docs/examples/render.cjs`.

@@ -18,7 +18,18 @@ Works in **Claude Code** and **Codex**. It never posts to Instagram for you.
 
 **4 layout patterns:** centered seam hero · off-center hero bleeding across the seam · a different photo per slide (2–3 photos) · big cropped hero with a small alternate angle. The assistant varies layouts across the options it gives you.
 
-Plus: brand profile (logo, palette, fonts, language), product facts saved with their source link, a tabbed review page, and approval-gated PNG export.
+**9 tested color palettes** (60/30/10 rule, with a contrast checker) to decide color combinations, see [Colors: 60/30/10 palettes](#colors-603010-palettes). Plus: brand profile (logo, palette, fonts, language), product facts saved with their source link, a tabbed review page, and approval-gated PNG export.
+
+## Colors: 60/30/10 palettes
+
+Not sure which colors go together? The plugin bundles the **`palette-603010`** skill: nine tested palettes (base 60% · support 30% · accent 10%) with exact hex codes, pairing rules and a contrast checker.
+
+![Nine 60/30/10 palettes](docs/palettes.png)
+
+- **Your brand colors win.** If you gave a palette, it is used (`background` = 60% base, `surface` = 30% support, `accent` = 10% accent).
+- **No palette?** The assistant proposes 2–3 that fit the product and style, with hex codes and why the accent works. Ask any time: `/ab-instacreator:insta-palette warm gift box, Arabic text` (Codex: "Use $palette-603010 …").
+- **Different options get different palettes**, so options differ in color as well as style.
+- **Contrast is checked before you see a design** (`scripts/contrast.py`): body text ≥ 4.5:1, headlines 3–4.5, below 3 only shapes. The review page shows each design's palette swatches.
 
 ## Gallery
 
@@ -142,7 +153,7 @@ Releases are numbered `MAJOR.MINOR.PATCH` (shown in `.claude-plugin/plugin.json`
 | 5. Approve + export | `/ab-instacreator:insta-export` | "Export the approved version" |
 | 6. Post | You post it yourself | same |
 
-Other commands: `/ab-instacreator:insta-styles` shows style comparisons. Skill mode (no plugin) has no slash commands: just describe what you want and mention `insta-creator`.
+Other commands: `/ab-instacreator:insta-styles` shows style comparisons; `/ab-instacreator:insta-palette` picks colors. Skill mode (no plugin) has no slash commands: just describe what you want and mention `insta-creator`.
 
 Tips: more photos give more layouts. Say the size if you want a story (1080×1920) or a square (1080×1080). Say "different layouts" for different product placements. Default post size is 1080×1440.
 
