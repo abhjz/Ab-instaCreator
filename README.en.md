@@ -64,8 +64,6 @@ The assistant mixes styles and layouts, so you can ask for "Swiss style with an 
 You need: Node.js 18+, Python 3, and Claude Code or Codex.
 
 ### Claude Code (plugin)
-The repo is private, so your GitHub account needs access and git must be signed in (`gh auth login` is the easy way).
-
 ```bash
 claude plugin marketplace add abhjz/Ab-instaCreator
 ```
@@ -118,7 +116,6 @@ So every new style, layout and fix I release reaches you on its own. In a normal
 > ℹ️ `/plugin` is interactive and works in a **regular terminal only**, not inside the desktop app's Code tab.
 > ⚠️ **Without this step you get no updates.** Auto-update is off by default for third-party marketplaces.
 > 🔁 Want the latest now? `claude plugin marketplace update ab-instacreator`, then `claude plugin update ab-instacreator@ab-instacreator`, then restart `claude`.
-> 🔒 While this repository is private, background auto-update only works if git can sign in without asking (for example after `gh auth login`, or with a `GITHUB_TOKEN` in your environment). A public repository needs nothing.
 
 ### 🌐 Or from claude.ai (no terminal)
 
@@ -163,7 +160,6 @@ then restart `claude`. Skill mode: `git pull && ./install.sh all`. Remove it: `c
 ## Troubleshooting
 | Problem | Fix |
 |---|---|
-| Repo link gives 404 | The repo is private. Sign in with an account that has access (`gh auth login`). |
 | Plugin/commands missing | Run `claude plugin list`, then restart `claude` / open a new session. |
 | `Failed to add marketplace` | Don't continue. Run `claude plugin marketplace list`; if `ab-instacreator` is missing, run the add command again. |
 | No updates arrive | Turn on auto-update (see above), or update by hand. |

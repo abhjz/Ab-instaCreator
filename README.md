@@ -65,7 +65,7 @@
 
 ### 1. التثبيت
 
-تحتاج: Node.js 18+ وPython 3 وClaude Code أو Codex. المستودع **خاص**: حسابك على GitHub يجب أن يملك صلاحية الوصول، وgit يجب أن يكون مسجّل الدخول (أسهل طريقة: `gh auth login`).
+تحتاج: Node.js 18+ وPython 3 وClaude Code أو Codex.
 
 **Claude Code (إضافة):**
 
@@ -122,7 +122,6 @@ bash skills/insta-creator/scripts/setup.sh
 > ℹ️ أمر `/plugin` تفاعلي ويعمل في **الطرفية العادية فقط**، وليس داخل تبويب Code في تطبيق الديسكتوب.
 > ⚠️ **بدون هذه الخطوة لن يصلك أي تحديث**: التحديث التلقائي مطفأ افتراضيًا للمتاجر الخارجية.
 > 🔁 تريد آخر نسخة الآن؟ `claude plugin marketplace update ab-instacreator` ثم `claude plugin update ab-instacreator@ab-instacreator` ثم أعد تشغيل `claude`.
-> 🔒 ما دام المستودع **خاصًا**، لا يعمل التحديث التلقائي في الخلفية إلا إذا استطاع git تسجيل الدخول بدون سؤال (مثلًا بعد `gh auth login` أو بوجود `GITHUB_TOKEN` في بيئتك). المستودع العام لا يحتاج شيئًا.
 
 ### 🌐 أو من claude.ai (بدون طرفية)
 
@@ -274,7 +273,6 @@ claude plugin update ab-instacreator@ab-instacreator
 
 | المشكلة | الحل |
 |---|---|
-| الرابط يقول 404 | المستودع خاص؛ سجّل الدخول بالحساب الذي لديه صلاحية |
 | الإضافة لا تظهر | تحقق من `claude plugin list` وأعد تشغيل `claude` |
 | `Failed to add marketplace` | لا تكمل. شغّل `claude plugin marketplace list`؛ إن لم يظهر `ab-instacreator` فأعد أمر الإضافة |
 | لا تصل تحديثات | فعّل التحديث التلقائي (أعلاه) أو حدّث يدويًا |

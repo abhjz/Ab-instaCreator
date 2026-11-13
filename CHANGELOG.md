@@ -1,4 +1,7 @@
 # Changelog
+## 0.2.2 · 2026-11-13
+- Repository is now public: removed private-repo notes from install docs
+
 ## 0.2.1 · 2026-11-13
 - Auto-update and versioning docs (EN + AR): enable auto-update, claude.ai sync, verify steps, troubleshooting
 - Redesigned template demos, full 20-style gallery and stories, new banner

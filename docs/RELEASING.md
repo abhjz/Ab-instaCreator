@@ -25,5 +25,5 @@ Users get updates through Claude Code's marketplace auto-update (they turn it on
 ## New styles or layouts
 Add the guide under `skills/insta-creator/references/`, then regenerate the gallery: `python3 docs/examples/build_examples.py && node docs/examples/render.cjs` (update README tables if you add a style).
 
-## Private vs public
-While the repo is private, users' background auto-update needs git sign-in (`gh auth login` or `GITHUB_TOKEN`). A public repo needs nothing, which is why a public release is the smoothest for users.
+## Public repository
+The repo is public (MIT), so installs and background auto-updates need no GitHub sign-in. Before pushing, keep private files (brand files, customer photos, keys, personal emails) out of Git: history is public and permanent.
