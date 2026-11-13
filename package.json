@@ -1,7 +1,7 @@
 {
   "name": "ab-instacreator",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Local HTML preview and PNG export helpers",
   "dependencies": {
     "playwright": "^1.56.1"

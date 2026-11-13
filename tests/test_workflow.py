@@ -18,6 +18,12 @@ class WorkflowTests(unittest.TestCase):
  def test_twenty_guides_and_manifest(self):
   self.assertEqual(len(list((ROOT/'skills/insta-creator/references/styles').glob('*.md'))),20)
   manifest=json.loads((ROOT/'.claude-plugin/plugin.json').read_text());market=json.loads((ROOT/'.claude-plugin/marketplace.json').read_text());self.assertEqual(manifest['name'],market['plugins'][0]['name']);self.assertTrue((ROOT/'skills/insta-creator/SKILL.md').is_file())
+class VersionTests(unittest.TestCase):
+ def test_versions_agree(self):
+  import re
+  a=json.loads((ROOT/'.claude-plugin/plugin.json').read_text())['version'];b=json.loads((ROOT/'package.json').read_text())['version']
+  c=re.search(r'^## (\d+\.\d+\.\d+)',(ROOT/'CHANGELOG.md').read_text(),re.M).group(1)
+  self.assertEqual(a,b);self.assertEqual(a,c)
 class InstallTests(unittest.TestCase):
  def test_install_both_hosts(self):
   import subprocess,os

@@ -68,8 +68,16 @@ The repo is private, so your GitHub account needs access and git must be signed 
 
 ```bash
 claude plugin marketplace add abhjz/Ab-instaCreator
+```
+```bash
+claude plugin marketplace list
+```
+```bash
 claude plugin install ab-instacreator@ab-instacreator
 ```
+
+- ✅ **Check after the first command:** the second command (`marketplace list`) must show `ab-instacreator`. If it doesn't, run the first command again (the connection may have dropped).
+- 🏷️ **Two names, don't mix them up:** the add command takes the **repository** (`abhjz/Ab-instaCreator`); the install command takes **plugin@marketplace** (`ab-instacreator@ab-instacreator`, all lowercase).
 
 Or from a local folder (download the ZIP, extract it):
 
@@ -99,6 +107,33 @@ Installs Playwright + Chromium into `~/.ab-instacreator` (shared, survives updat
 
 **Start a NEW session after installing.**
 
+### 🔄 Turn on auto-update: don't skip this
+
+So every new style, layout and fix I release reaches you on its own. In a normal terminal run `claude`, then:
+
+```
+/plugin  →  Marketplaces  →  ab-instacreator  →  Enable auto-update
+```
+
+> ℹ️ `/plugin` is interactive and works in a **regular terminal only**, not inside the desktop app's Code tab.
+> ⚠️ **Without this step you get no updates.** Auto-update is off by default for third-party marketplaces.
+> 🔁 Want the latest now? `claude plugin marketplace update ab-instacreator`, then `claude plugin update ab-instacreator@ab-instacreator`, then restart `claude`.
+> 🔒 While this repository is private, background auto-update only works if git can sign in without asking (for example after `gh auth login`, or with a `GITHUB_TOKEN` in your environment). A public repository needs nothing.
+
+### 🌐 Or from claude.ai (no terminal)
+
+Install once and it shows up on web, desktop and mobile, and keeps itself updated:
+
+1. Open **claude.ai** → click your name → **Settings** → **Customize** → **Plugins** → **Add** → **Add marketplace**
+2. Paste `abhjz/Ab-instaCreator`, add it, then add **Ab-instaCreator**.
+3. **Add** → **Manage marketplaces** → **⋮** → turn on **Sync automatically**.
+
+> ☝️ Pick one way only (terminal **or** claude.ai) so you don't get duplicates. Skill mode (`install.sh`) is separate: update it with `git pull && ./install.sh all`.
+
+### 🏷️ Versions
+
+Releases are numbered `MAJOR.MINOR.PATCH` (shown in `.claude-plugin/plugin.json` and in the [changelog](CHANGELOG.md)). Check what you have with `claude plugin list`. A new number is what triggers your auto-update, and the changelog says what changed.
+
 ## Use it
 
 | Step | Claude Code | Codex |
@@ -118,17 +153,21 @@ Tips: more photos give more layouts. Say the size if you want a story (1080×192
 In your project folder (never inside the plugin): `review.html`, one editable HTML per design, `facts.json`, and after approval `design-Slide-1.png`, `design-Slide-2.png`, … plus the caption (exactly five hashtags). Existing PNGs are never overwritten.
 
 ## Update
+Auto-update (above) does it for you. To update by hand:
 ```bash
 claude plugin marketplace update ab-instacreator
 claude plugin update ab-instacreator@ab-instacreator
 ```
-Codex: `git pull && ./install.sh codex`.
+then restart `claude`. Skill mode: `git pull && ./install.sh all`. Remove it: `claude plugin uninstall ab-instacreator@ab-instacreator`.
 
 ## Troubleshooting
 | Problem | Fix |
 |---|---|
 | Repo link gives 404 | The repo is private. Sign in with an account that has access (`gh auth login`). |
-| Plugin/commands missing | Run `claude plugin list`, then open a new session. |
+| Plugin/commands missing | Run `claude plugin list`, then restart `claude` / open a new session. |
+| `Failed to add marketplace` | Don't continue. Run `claude plugin marketplace list`; if `ab-instacreator` is missing, run the add command again. |
+| No updates arrive | Turn on auto-update (see above), or update by hand. |
+| Everything appears twice | You installed twice (terminal and claude.ai, or plugin and skill mode). Keep one. |
 | Skill not found in Codex | Check the folder from `install.sh`, then open a new session. |
 | "Playwright not found" | `bash skills/insta-creator/scripts/setup.sh` |
 | No Chromium | Same command, or set `CHROME_PATH` to an existing Chrome. |

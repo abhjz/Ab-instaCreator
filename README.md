@@ -71,8 +71,16 @@
 
 ```bash
 claude plugin marketplace add abhjz/Ab-instaCreator
+```
+```bash
+claude plugin marketplace list
+```
+```bash
 claude plugin install ab-instacreator@ab-instacreator
 ```
+
+- ✅ **تحقق بعد الأمر الأول:** الأمر الثاني (`marketplace list`) **يجب أن يُظهر `ab-instacreator`**. إن لم يظهر فأعد الأمر الأول (ربما انقطع الاتصال).
+- 🏷️ **اسمان لا تخلط بينهما:** أمر الإضافة يأخذ اسم **المستودع** (`abhjz/Ab-instaCreator`)، وأمر التنصيب يأخذ **الإضافة@المتجر** (`ab-instacreator@ab-instacreator` بأحرف صغيرة).
 
 أو من مجلد محلي (حمّل ZIP وفكّه):
 
@@ -102,6 +110,33 @@ bash skills/insta-creator/scripts/setup.sh
 يثبّت Playwright وChromium في `~/.ab-instacreator` ويبقى بعد التحديثات. أو قل للمساعد: «جهّز أدوات التصدير».
 
 **افتح جلسة جديدة بعد التثبيت.** في Claude تبدأ الأوامر بـ `/ab-instacreator:`؛ في Codex اذكر `$insta-creator` في طلبك.
+
+### 🔄 فعّل التحديث التلقائي — لا تتخطّ هذه الخطوة
+
+حتى يصلك كل ستايل وتخطيط وإصلاح جديد أصدره تلقائيًا. في الطرفية العادية اكتب `claude` ثم:
+
+```
+/plugin  →  Marketplaces  →  ab-instacreator  →  Enable auto-update
+```
+
+> ℹ️ أمر `/plugin` تفاعلي ويعمل في **الطرفية العادية فقط**، وليس داخل تبويب Code في تطبيق الديسكتوب.
+> ⚠️ **بدون هذه الخطوة لن يصلك أي تحديث**: التحديث التلقائي مطفأ افتراضيًا للمتاجر الخارجية.
+> 🔁 تريد آخر نسخة الآن؟ `claude plugin marketplace update ab-instacreator` ثم `claude plugin update ab-instacreator@ab-instacreator` ثم أعد تشغيل `claude`.
+> 🔒 ما دام المستودع **خاصًا**، لا يعمل التحديث التلقائي في الخلفية إلا إذا استطاع git تسجيل الدخول بدون سؤال (مثلًا بعد `gh auth login` أو بوجود `GITHUB_TOKEN` في بيئتك). المستودع العام لا يحتاج شيئًا.
+
+### 🌐 أو من claude.ai (بدون طرفية)
+
+تثبّته مرة واحدة فيظهر لك على الويب والديسكتوب والجوال ويتحدّث تلقائيًا:
+
+1. افتح **claude.ai** ← اضغط اسمك ← **Settings** ← **Customize** ← **Plugins** ← **Add** ← **Add marketplace**
+2. الصق `abhjz/Ab-instaCreator` وأضفه، ثم أضف **Ab-instaCreator**.
+3. **Add** ← **Manage marketplaces** ← **⋮** ← فعّل **Sync automatically**.
+
+> ☝️ اختر طريقة واحدة فقط (الطرفية **أو** claude.ai) حتى لا يتكرر. وضع المهارة (`install.sh`) منفصل: حدّثه بـ `git pull && ./install.sh all`.
+
+### 🏷️ الإصدارات
+
+الإصدارات مرقّمة `MAJOR.MINOR.PATCH` (تظهر في `.claude-plugin/plugin.json` وفي [سجل التغييرات](CHANGELOG.md)). اعرف نسختك بـ `claude plugin list`. الرقم الجديد هو ما يشغّل تحديثك التلقائي، وسجل التغييرات يشرح ما تغيّر.
 
 ### 2. الإعداد: أول مرة
 
@@ -224,12 +259,14 @@ python3 skills/insta-creator/scripts/gallery.py skills/insta-creator/examples/re
 
 ## تحديث الإضافة
 
+التحديث التلقائي (أعلاه) يكفي. للتحديث اليدوي:
+
 ```bash
 claude plugin marketplace update ab-instacreator
 claude plugin update ab-instacreator@ab-instacreator
 ```
 
-Codex: `git pull && ./install.sh codex`
+ثم أعد تشغيل `claude`. وضع المهارة: `git pull && ./install.sh all`. للحذف: `claude plugin uninstall ab-instacreator@ab-instacreator`.
 
 [تفاصيل التشغيل والاختبار](docs/DEVELOPMENT.md) · [مرجع إضافات Claude الرسمي](https://code.claude.com/docs/en/plugins)
 
@@ -238,7 +275,10 @@ Codex: `git pull && ./install.sh codex`
 | المشكلة | الحل |
 |---|---|
 | الرابط يقول 404 | المستودع خاص؛ سجّل الدخول بالحساب الذي لديه صلاحية |
-| الإضافة لا تظهر | تحقق من `claude plugin list` وأعد فتح الجلسة |
+| الإضافة لا تظهر | تحقق من `claude plugin list` وأعد تشغيل `claude` |
+| `Failed to add marketplace` | لا تكمل. شغّل `claude plugin marketplace list`؛ إن لم يظهر `ab-instacreator` فأعد أمر الإضافة |
+| لا تصل تحديثات | فعّل التحديث التلقائي (أعلاه) أو حدّث يدويًا |
+| كل شيء مكرر | ثبّتّه مرتين (طرفية وclaude.ai، أو إضافة ومهارة). أبقِ واحدة |
 | Playwright not found | نفّذ `bash skills/insta-creator/scripts/setup.sh` |
 | Chromium غير موجود | نفس الأمر أعلاه، أو حدّد `CHROME_PATH` لمتصفح Chrome موجود |
 | صورة المنتج لا تظهر | حافظ على مجلد assets ومساراته النسبية عند نقل المشروع |

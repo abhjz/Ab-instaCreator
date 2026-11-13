@@ -12,3 +12,5 @@ Run `npm test`, then export both templates to a fresh temporary directory. Inspe
 Before a release, review the publication file list. Keep private brand files, working outputs, secrets and third-party reference imagery out of Git. No production brand is included. GitHub upload is not proof of successful plugin installation; verify that separately in the target host.
 
 Layout guidance lives in `skills/insta-creator/references/layout-patterns.md`. License: MIT (Raleway under OFL 1.1, see NOTICE.md).
+
+Releases and versioning: see `docs/RELEASING.md` (`tools/bump_version.py` bumps plugin.json, package.json and the changelog together).
