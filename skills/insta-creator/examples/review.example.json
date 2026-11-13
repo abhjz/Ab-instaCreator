@@ -1,0 +1,23 @@
+{
+  "title": "Ab-instaCreator \u00b7 design review",
+  "designs": [
+    {
+      "id": "carousel-demo",
+      "title": "Connected canvas",
+      "category": "Posts",
+      "style": "Glassmorphism",
+      "version": "v1",
+      "status": "Demo",
+      "path": "../templates/scene.html"
+    },
+    {
+      "id": "poll-demo",
+      "title": "Choose your finish",
+      "category": "Stories",
+      "style": "Minimalism",
+      "version": "v1",
+      "status": "Demo",
+      "path": "../templates/story.html"
+    }
+  ]
+}

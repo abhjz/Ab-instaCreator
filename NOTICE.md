@@ -1,4 +1,5 @@
-# Asset and distribution notice
-This repository contains original instructions, code and geometric demo artwork. No customer projects, product photographs, company logos, private captions or reference-video frames are bundled.
-Raleway is distributed under SIL Open Font License 1.1; see `skills/insta-creator/assets/OFL-Raleway.txt`. User assets remain subject to their owners' rights.
-No general open-source license is granted for the remaining repository in this initial private version. The owner may select a license before public release.
+# Licenses and notices
+- **Ab-instaCreator** (instructions, scripts, templates, demo artwork): MIT License. See `LICENSE`.
+- **Raleway** variable font (`skills/insta-creator/assets/`): SIL Open Font License 1.1. See `skills/insta-creator/assets/OFL-Raleway.txt`. The font stays under the OFL, not MIT.
+- **Playwright** is not bundled. `setup.sh` installs it from npm at your request; it is Apache-2.0 licensed by its authors.
+- This repository bundles no customer projects, product photographs, company logos, private captions or reference-video frames. Anything you supply (photos, logos, brand files, product text) stays subject to its owner's rights, and your generated designs are your responsibility to clear for publication.

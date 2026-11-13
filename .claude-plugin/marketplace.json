@@ -1,0 +1,14 @@
+{
+  "name": "ab-instacreator",
+  "owner": {
+    "name": "abhjz"
+  },
+  "plugins": [
+    {
+      "name": "ab-instacreator",
+      "source": "./",
+      "description": "Instagram design studio: 20 styles, brand profiles, review galleries and exports."
+    }
+  ],
+  "description": "Brand-aware Instagram design studio for Claude Code."
+}

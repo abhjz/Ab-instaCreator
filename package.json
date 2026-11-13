@@ -1,0 +1,13 @@
+{
+  "name": "ab-instacreator",
+  "private": true,
+  "version": "0.2.0",
+  "description": "Local HTML preview and PNG export helpers",
+  "dependencies": {
+    "playwright": "^1.56.1"
+  },
+  "scripts": {
+    "test": "python3 -m unittest discover -s tests"
+  },
+  "license": "MIT"
+}

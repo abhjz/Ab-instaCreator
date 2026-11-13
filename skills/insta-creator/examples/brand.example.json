@@ -1,0 +1,20 @@
+{
+  "name": "YOUR BRAND",
+  "palette": {
+    "background": "#111318",
+    "surface": "#252933",
+    "accent": "#8EF0CF",
+    "text": "#FFFFFF"
+  },
+  "font": {
+    "english": "Raleway",
+    "arabic": null
+  },
+  "logo": null,
+  "website": null,
+  "handle": null,
+  "language": "en",
+  "caption_tone": "clear, concise, factual",
+  "hashtags": 5,
+  "preferred_styles": []
+}

@@ -1,55 +1,84 @@
 # Ab-instaCreator
 
-**أعطه صور المنتج ورابط التفاصيل. راجع التصاميم في صفحة واحدة، واختر ما تريد تصديره.**
+**بوستات انستقرام وكاروسيل متصل وستوري، يصممها مساعدك الذكي.** أعطه صور المنتج ورابط التفاصيل وهويتك. يبني تصاميم قابلة للتعديل بأكثر من ستايل وأكثر من تخطيط، تراجعها في صفحة واحدة، ثم يصدّر ملفات PNG المعتمدة وكابشن بخمسة هاشتاقات.
 
-بوستات، كاروسيل متصل، وستوري بهويتك. 20 دليل ستايل، مقاسات واضحة، نصوص قابلة للمراجعة، ثم ملفات PNG وكابشن بخمسة هاشتاقات.
+يعمل مع **Claude Code** و**Codex**. لا ينشر على انستقرام نيابةً عنك.
 
-![Ab-instaCreator](banner.svg)
+![Ab-instaCreator](docs/banner.svg)
 
-[English guide](README.en.md) · [دليل الستايلات](Ab-instaCreator-v0.1.0.zip) · [مثال الكاروسيل](Ab-instaCreator-v0.1.0.zip) · [سجل التغييرات](CHANGELOG.md)
+[English guide](README.en.md) · [دليل الستايلات](skills/insta-creator/references/styles.md) · [أنماط التخطيط](skills/insta-creator/references/layout-patterns.md) · [سجل التغييرات](CHANGELOG.md)
 
-## 👀 أمثلة وماذا تستلم
+## ماذا يصنع؟
 
-| نوع التصميم | النتيجة |
+| النوع | النتيجة |
 |---|---|
-| كاروسيل Glassmorphism | سلايدان من مشهد واحد؛ العنصر يكمل عبر الحد الفاصل |
-| ستوري Minimalism | عنوان واضح ومساحة كبيرة لملصق التصويت |
-| صفحة المراجعة | تبويبات للبوستات والستوري، واسم الستايل والنسخة تحت كل خيار |
+| **بوستات** | تصميم منفرد 1080×1440 (أو 1080×1350 / 1080×1080) |
+| **كاروسيل متصل** | 2–3 سلايدات من مشهد واحد؛ المنتج يكمل عبر السحب |
+| **ستوري** | 1080×1920 مع مساحة نظيفة لملصق التصويت |
 
-![كاروسيل تجريبي](carousel-demo.png)
-![ستوري ومساحة التصويت](story-demo.png)
+**20 دليل ستايل:** مينيمال، ماكسيمال، مستقبلي، فيكتور، كولاج، ريترو، سايبربانك، بوب آرت، زجاجي، كلاي، بيكسل، إديتوريال، Y2K، سويسري، سريالي، بوهيمي، فيكتوري، غرافيتي، أورورا، خط يد.
 
-الأمثلة هندسية أصلية لتوضيح الآلية. صور المنتجات الفعلية تأتي من ملفاتك؛ لا ندّعي أن الأمثلة إعلانات منشورة.
+**4 أنماط تخطيط:** منتج في منتصف الحد الفاصل · منتج خارج المركز يتجاوز الحد · صورة مختلفة لكل سلايد (2–3 صور) · منتج كبير مقصوص مع زاوية ثانية صغيرة. المساعد ينوّع التخطيطات بين الخيارات.
+
+ويشمل: ملف هوية (شعار، ألوان، خطوط، لغة)، حفظ معلومات المنتج مع مصدرها، صفحة مراجعة بتبويبات، وتصدير لا يتم إلا بعد موافقتك.
+
+## 👀 معرض الأمثلة
+
+أمثلة هندسية محايدة؛ صورك وشعارك ونصوصك تحلّ مكان النصوص التجريبية.
+
+| مينيمال · منتج على الحد | سايبربانك · منتج خارج المركز |
+|---|---|
+| ![مينيمال](docs/examples/minimalism-seam-hero.png) | ![سايبربانك](docs/examples/cyberpunk-offcenter.png) |
+
+| سويسري · صورة لكل سلايد | ستوري · مساحة التصويت |
+|---|---|
+| ![سويسري](docs/examples/swiss-photo-per-slide.png) | ![ستوري](docs/story-demo.png) |
+
+كاروسيل زجاجي متصل:
+
+![كاروسيل زجاجي](docs/carousel-demo.png)
 
 ## 🚀 ابدأ هنا: تثبيت، إعداد، تصميم
 
-### 1. حمّل الإضافة وثبّتها
+### 1. التثبيت
 
-حمّل [الحزمة الكاملة](Ab-instaCreator-v0.1.0.zip)، وفك الضغط، ثم استخدم المسار الكامل للمجلد الناتج في الأمر التالي. التوزيع الحالي كحزمة ZIP تحتوي المصدر كاملًا؛ تثبيت السوق مباشرة من رابط GitHub غير متاح في هذا الإصدار.
+تحتاج: Node.js 18+ وPython 3 وClaude Code أو Codex. المستودع **خاص**: حسابك على GitHub يجب أن يملك صلاحية الوصول، وgit يجب أن يكون مسجّل الدخول (أسهل طريقة: `gh auth login`).
 
-هذا المستودع **خاص حاليًا**. تحتاج حسابًا لديه صلاحية الوصول. الاسم على GitHub هو `Ab-instaCreator`، واسم الإضافة التقني هو `ab-instacreator`.
-
-1. افتح Terminal على Mac أو PowerShell على Windows.
-2. اكتب `claude --version`. إذا لم يظهر رقم إصدار، ثبّت Claude Code من [التوثيق الرسمي](https://code.claude.com/docs/en/overview).
-3. فك الحزمة في مجلد تحتفظ به، واستبدل `/absolute/path/to/Ab-instaCreator` بمساره الحقيقي. على Windows استخدم المسار الكامل بين علامتي تنصيص.
-4. نفّذ الأوامر واحدًا واحدًا:
-
+**Claude Code (إضافة):**
 
 ```bash
-claude plugin marketplace add /absolute/path/to/Ab-instaCreator
-claude plugin marketplace list
+claude plugin marketplace add abhjz/Ab-instaCreator
 claude plugin install ab-instacreator@ab-instacreator
 ```
 
-افتح جلسة جديدة ثم اطلب التصميم. هذه الأوامر لـClaude Code. استخدام Claude العادي أو الجوال يعتمد على دعم الإضافات والأدوات في حسابك؛ لا نفترض أن ملفات الكمبيوتر أو أدوات التصدير متاحة هناك.
-
-لتجربة المجلد محليًا قبل تثبيت السوق:
+أو من مجلد محلي (حمّل ZIP وفكّه):
 
 ```bash
-claude --plugin-dir /absolute/path/to/Ab-instaCreator
+claude plugin marketplace add /absolute/path/to/Ab-instaCreator
+claude plugin install ab-instacreator@ab-instacreator
 ```
 
-في Codex، انسخ **المجلد كاملًا** `skills/insta-creator` إلى مجلد المهارات الذي تستخدمه، مثل `~/.agents/skills/insta-creator`، ثم افتح جلسة جديدة. احتفظ بالسكربتات والمراجع والخط داخل المجلد. هذه طريقة مهارة محلية؛ ليست ادعاءً أن سوق Claude يثبت داخل Codex.
+للتجربة بدون تثبيت: `claude --plugin-dir /absolute/path/to/Ab-instaCreator`
+
+**Codex (مهارة):**
+
+```bash
+git clone https://github.com/abhjz/Ab-instaCreator.git
+cd Ab-instaCreator
+./install.sh codex
+```
+
+ينسخ المهارة إلى `~/.agents/skills/insta-creator`. لمجلد مختلف: `CODEX_SKILLS_DIR=~/.codex/skills ./install.sh codex`. الأمر `./install.sh all` يثبّتها في Claude وCodex معًا كمهارة.
+
+**إعداد التصدير (مرة واحدة، للاثنين):**
+
+```bash
+bash skills/insta-creator/scripts/setup.sh
+```
+
+يثبّت Playwright وChromium في `~/.ab-instacreator` ويبقى بعد التحديثات. أو قل للمساعد: «جهّز أدوات التصدير».
+
+**افتح جلسة جديدة بعد التثبيت.** في Claude تبدأ الأوامر بـ `/ab-instacreator:`؛ في Codex اذكر `$insta-creator` في طلبك.
 
 ### 2. الإعداد: أول مرة
 
@@ -131,7 +160,7 @@ Minimalism · Maximalism · Futuristic · Vector Art · Collage · Retro · Cybe
 
 صفحة HTML رئيسية بتبويبات للبوستات والستوري أو فئات تختارها. كل تصميم له اسم الستايل ورقم النسخة وحالتها. الكاروسيل يُعرض متصلًا أو كسلايدات منفصلة. التعديلات تبقى بنسخ جديدة. الملفات المعتمدة تصدّر بالحجم الحقيقي؛ لا تُصوّر لقطة شاشة مصغرة من المعاينة.
 
-![معاينة الكاروسيل](carousel-demo.png)
+![معاينة الكاروسيل](docs/carousel-demo.png)
 
 هذا مثال هندسي أصلي لشرح اتصال السلايدات، وليس إعلان منتج حقيقي.
 
@@ -150,8 +179,7 @@ Minimalism · Maximalism · Futuristic · Vector Art · Collage · Retro · Cybe
 من داخل المجلد:
 
 ```bash
-npm install
-npx playwright install chromium
+bash skills/insta-creator/scripts/setup.sh
 node skills/insta-creator/scripts/export.cjs skills/insta-creator/templates/scene.html output/demo --approved
 ```
 
@@ -169,17 +197,18 @@ python3 skills/insta-creator/scripts/gallery.py skills/insta-creator/examples/re
 
 ## ما اختُبر؟
 
-تم اختبار توليد صفحة المراجعة وتصدير مثال الكاروسيل والستوري محليًا على macOS/Chrome. أدلة الستايلات تعليمات تصميم تحتاج مراجعة بصرية في كل مهمة. لم يُختبر تثبيت الإضافة في كل تطبيق أو على الهاتف؛ لا نعد بتشغيل موحد عبر كل الأجهزة.
+تم اختبار Claude Code على macOS: التحقق من الإضافة وتوليد صفحة المراجعة وتصدير مثال الكاروسيل والستوري محليًا على macOS/Chrome. أدلة الستايلات تعليمات تصميم تحتاج مراجعة بصرية في كل مهمة. تثبيت Codex لم يُختبر بعد. لم يُختبر التثبيت في كل تطبيق أو على الهاتف؛ لا نعد بتشغيل موحد عبر كل الأجهزة.
 
 ## تحديث الإضافة
 
-حمّل الحزمة الجديدة وفكها إلى المجلد المحلي نفسه، ثم نفّذ:
-
 ```bash
+claude plugin marketplace update ab-instacreator
 claude plugin update ab-instacreator@ab-instacreator
 ```
 
-[تفاصيل التشغيل والاختبار](Ab-instaCreator-v0.1.0.zip) · [مرجع إضافات Claude الرسمي](https://code.claude.com/docs/en/plugins)
+Codex: `git pull && ./install.sh codex`
+
+[تفاصيل التشغيل والاختبار](docs/DEVELOPMENT.md) · [مرجع إضافات Claude الرسمي](https://code.claude.com/docs/en/plugins)
 
 ## 🧰 لو صار شيء
 
@@ -187,8 +216,8 @@ claude plugin update ab-instacreator@ab-instacreator
 |---|---|
 | الرابط يقول 404 | المستودع خاص؛ سجّل الدخول بالحساب الذي لديه صلاحية |
 | الإضافة لا تظهر | تحقق من `claude plugin list` وأعد فتح الجلسة |
-| Cannot find module playwright | نفّذ `npm install` من مجلد الحزمة |
-| Chromium غير موجود | نفّذ `npx playwright install chromium` |
+| Playwright not found | نفّذ `bash skills/insta-creator/scripts/setup.sh` |
+| Chromium غير موجود | نفس الأمر أعلاه، أو حدّد `CHROME_PATH` لمتصفح Chrome موجود |
 | صورة المنتج لا تظهر | حافظ على مجلد assets ومساراته النسبية عند نقل المشروع |
 | الخط العربي غير متصل | اختر خطًا عربيًا متاحًا وافحص RTL؛ Raleway للإنجليزية |
 | التصدير يرفض الكتابة | الملف موجود؛ اختر نسخة جديدة بدل استبدال المعتمد |
@@ -202,3 +231,6 @@ claude plugin update ab-instacreator@ab-instacreator
 ## ما داخل الحزمة؟
 
 `commands/` للأوامر، و`skills/insta-creator/` للتعليمات والمراجع والستايلات والخط والأمثلة والسكربتات، و`tests/` للفحوصات. كل المشروع قابل للقراءة والتعديل. لا يحتاج اتصالًا بحساب Instagram لإنشاء التصميم.
+
+## الترخيص
+MIT. انظر [LICENSE](LICENSE) و[NOTICE](NOTICE.md) (خط Raleway بترخيص OFL 1.1).

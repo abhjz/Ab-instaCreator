@@ -1,0 +1,6 @@
+interface:
+  display_name: Insta Creator
+  short_description: Design Instagram posts, carousels and stories
+  default_prompt: Use $insta-creator to create branded Instagram designs with HTML previews and approved PNG exports.
+policy:
+  allow_implicit_invocation: true
