@@ -1,3 +1,30 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Insta Creator · connected canvas demo</title><style>
-@font-face{font-family:Raleway;src:url('../assets/Raleway-Variable.ttf')}*{box-sizing:border-box}body{margin:0;background:#e9ecef;font-family:Raleway,sans-serif}header{padding:28px}button{padding:12px;font:inherit}.stage{overflow:auto;margin:28px}.pair{display:flex;width:max-content}.slide{width:1080px;height:1440px;overflow:hidden;position:relative;flex:none}.scene{width:2160px;height:1440px;position:absolute;left:0;top:0;color:white;background:radial-gradient(ellipse at 50% 64%,#27574c,#111318 65%)}.second .scene{left:-1080px}.scene h2{font-size:92px;line-height:1;margin:0}.copy{position:absolute;top:240px;left:84px}.copy.two{left:1220px}.copy p{font-size:30px}.pill{font-size:24px;letter-spacing:3px;color:#8ef0cf}.object{position:absolute;left:780px;top:600px;width:600px;height:600px;border-radius:50%;background:linear-gradient(135deg,#b9ffe7,#467969);box-shadow:0 40px 80px #0008}.glass{position:absolute;left:84px;top:1000px;width:700px;border:1px solid #ffffff45;background:#ffffff12;backdrop-filter:blur(20px);padding:42px;border-radius:28px;font-size:30px}.logo{position:absolute;top:90px;left:84px;font-size:32px;font-weight:800}.logo.two{left:1080px;width:1080px;text-align:center}.foot{position:absolute;left:84px;bottom:80px;font-size:23px}.foot.two{left:1220px}.separate{gap:40px}.guide{position:absolute;right:0;top:0;height:100%;border-right:2px dashed #ffb765}.exporting header,.exporting [data-review-only]{display:none!important}.exporting .stage{margin:0;overflow:visible;zoom:1!important}.exporting .pair{gap:0}
-</style><header data-review-only><h1>Connected canvas · Glassmorphism</h1><p>Original geometric demo. Replace shapes, copy and brand with the user's approved assets. 1080 × 1440 per slide.</p><button onclick="document.querySelector('.pair').classList.toggle('separate')">Connected / separate view</button></header><div class="stage"><div class="pair"><div class="slide" data-export-slide data-width="1080" data-height="1440"><div class="scene"><div class="logo">YOUR BRAND</div><div class="logo two">YOUR BRAND</div><div class="copy"><p class="pill">DESIGN / YOUR WAY</p><h2>One idea.<br>Two slides.</h2><p>A continuous canvas for your next story.</p></div><div class="copy two"><p class="pill">CONTINUE THE STORY</p><h2>Keep it<br>connected.</h2><p>Your product details belong here.</p></div><div class="object"></div><div class="glass">Your verified specifications.<br>Your voice. Your identity.</div><div class="foot">Swipe to continue</div><div class="foot two">Your website</div></div><div class="guide" data-review-only></div></div><div class="slide second" data-export-slide data-width="1080" data-height="1440"></div></div></div><script>document.querySelector('.second').append(document.querySelector('.scene').cloneNode(true));function fit(){document.querySelector('.stage').style.zoom=Math.min(1,(innerWidth-56)/2200)};addEventListener('resize',fit);fit()</script></html>
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Insta Creator · connected canvas</title><style>
+@font-face{font-family:Raleway;src:url('../assets/Raleway-Variable.ttf');font-weight:100 900}
+*{box-sizing:border-box}body{margin:0;background:#d9dcdf;font-family:Raleway,sans-serif}
+header{padding:28px}button{padding:12px;font:inherit}.stage{overflow:auto;margin:28px}.pair{display:flex;width:max-content}
+.slide{width:1080px;height:1440px;overflow:hidden;position:relative;flex:none}
+.scene{width:2160px;height:1440px;position:absolute;left:0;top:0;overflow:hidden;background:#efede8;color:#15161a}
+.second .scene{left:-1080px}
+.abs{position:absolute}.l{font-size:22px;letter-spacing:4px;font-weight:600;color:#6b6a66;text-transform:uppercase}
+.h{font-size:108px;line-height:.98;font-weight:700;letter-spacing:-2px;margin:0}
+.sub{font-size:32px;line-height:1.35;color:#3b3b39}
+.row{display:flex;justify-content:space-between;font-size:30px;padding:22px 0;border-bottom:2px solid #15161a1a}.row b{font-weight:700}
+/* placeholder product: replace with the cut-out product photo, keep it crossing the seam (x = 1080) */
+.product{position:absolute;left:870px;top:250px;width:420px;height:860px;border-radius:64px;transform:rotate(-6deg);background:linear-gradient(145deg,#4b5563,#111827 60%);box-shadow:inset 0 0 0 4px #ffffff22,0 60px 80px #0007}
+.product:after{content:'';position:absolute;inset:26px;border-radius:44px;background:linear-gradient(160deg,#7dd3fc,#6366f1 60%,#1e1b4b)}
+.separate{gap:40px}.guide{position:absolute;right:0;top:0;height:100%;border-right:2px dashed #ffb765}
+.exporting header,.exporting [data-review-only]{display:none!important}.exporting .stage{margin:0;overflow:visible;zoom:1!important}.exporting .pair{gap:0}
+</style>
+<header data-review-only><h1>Connected canvas · Minimalism</h1><p>Editable scaffold. Replace the placeholder product, copy and brand. 1080 × 1440 per slide. The dashed line marks the seam.</p><button onclick="document.querySelector('.pair').classList.toggle('separate')">Connected / separate view</button></header>
+<div class="stage"><div class="pair">
+<div class="slide" data-export-slide data-width="1080" data-height="1440"><div class="scene">
+<div class="product"></div>
+<div class="abs l" style="left:84px;top:90px">Your brand</div>
+<div class="abs" style="left:84px;top:200px;width:700px"><div class="l" style="margin-bottom:22px">Category</div><h2 class="h">Product<br>name</h2></div>
+<div class="abs sub" style="left:84px;top:1170px">One clear benefit.<br>Verified from your link.</div>
+<div class="abs" style="left:1360px;top:200px;width:640px"><div class="l" style="margin-bottom:22px">Why it matters</div><h2 class="h" style="font-size:84px">Made for<br>real use.</h2></div>
+<div class="abs" style="left:1360px;top:960px;width:640px"><div class="row"><span>Spec one</span><b>Value</b></div><div class="row"><span>Spec two</span><b>Value</b></div><div class="row" style="border:0"><span>Spec three</span><b>Value</b></div></div>
+</div><div class="guide" data-review-only></div></div>
+<div class="slide second" data-export-slide data-width="1080" data-height="1440"></div>
+</div></div>
+<script>document.querySelector('.second').append(document.querySelector('.scene').cloneNode(true));function fit(){document.querySelector('.stage').style.zoom=Math.min(1,(innerWidth-56)/2200)};addEventListener('resize',fit);fit()</script></html>

@@ -22,19 +22,42 @@ Plus: brand profile (logo, palette, fonts, language), product facts saved with t
 
 ## Gallery
 
-Brand-neutral demos. Your real photos, logo and copy replace the placeholders.
+Every example below is a brand-neutral placeholder design made with the plugin's own style guides and layouts. Your real photos, logo and copy replace the placeholders.
 
-| Minimalism · seam hero | Cyberpunk · off-center hero |
+### All 20 styles (2-slide connected carousels)
+
+| | |
 |---|---|
-| ![Minimalism seam hero carousel](docs/examples/minimalism-seam-hero.png) | ![Cyberpunk off-center carousel](docs/examples/cyberpunk-offcenter.png) |
+| ![Minimalism](docs/examples/styles/minimalism.png)<br>**1. Minimalism** · Seam hero | ![Maximalism](docs/examples/styles/maximalism.png)<br>**2. Maximalism** · Off-center hero |
+| ![Futuristic](docs/examples/styles/futuristic.png)<br>**3. Futuristic** · Cropped hero + alternate angle | ![Vector art](docs/examples/styles/vector-art.png)<br>**4. Vector art** · Photo per slide |
+| ![Collage](docs/examples/styles/collage.png)<br>**5. Collage** · Photo per slide | ![Retro](docs/examples/styles/retro.png)<br>**6. Retro** · Seam hero |
+| ![Cyberpunk](docs/examples/styles/cyberpunk.png)<br>**7. Cyberpunk** · Off-center hero | ![Pop art](docs/examples/styles/pop-art.png)<br>**8. Pop art** · Off-center hero |
+| ![Glassmorphism](docs/examples/styles/glassmorphism.png)<br>**9. Glassmorphism** · Cropped hero + alternate angle | ![Clay](docs/examples/styles/clay.png)<br>**10. Clay** · Seam hero |
+| ![Pixel art](docs/examples/styles/pixel-art.png)<br>**11. Pixel art** · Photo per slide | ![Editorial](docs/examples/styles/editorial.png)<br>**12. Editorial** · Seam hero |
+| ![Y2K](docs/examples/styles/y2k.png)<br>**13. Y2K** · Off-center hero | ![Swiss](docs/examples/styles/swiss.png)<br>**14. Swiss** · Photo per slide |
+| ![Surreal](docs/examples/styles/surreal.png)<br>**15. Surreal** · Cropped hero + alternate angle | ![Bohemian](docs/examples/styles/bohemian.png)<br>**16. Bohemian** · Seam hero |
+| ![Victorian](docs/examples/styles/victorian.png)<br>**17. Victorian** · Cropped hero + alternate angle | ![Graffiti](docs/examples/styles/graffiti.png)<br>**18. Graffiti** · Off-center hero |
+| ![Aurora](docs/examples/styles/aurora.png)<br>**19. Aurora** · Cropped hero + alternate angle | ![Handwritten](docs/examples/styles/handwritten.png)<br>**20. Handwritten** · Photo per slide |
 
-| Swiss · photo per slide | Story · poll space |
+### Stories
+
+Each story keeps the lower middle clear for Instagram's poll sticker. Nothing fake is burned into the PNG.
+
+| | | | |
+|---|---|---|---|
+| ![Minimalism](docs/examples/stories/minimalism.png) | ![Cyberpunk](docs/examples/stories/cyberpunk.png) | ![Pop art](docs/examples/stories/pop-art.png) | ![Aurora](docs/examples/stories/aurora.png) |
+| **Minimalism** | **Cyberpunk** | **Pop art** | **Aurora** |
+
+### Layout patterns
+
+| Layout | Used in |
 |---|---|
-| ![Swiss photo per slide carousel](docs/examples/swiss-photo-per-slide.png) | ![Story with poll space](docs/story-demo.png) |
+| **Seam hero**: product centered on the seam | Minimalism, Clay, Retro, Editorial, Bohemian |
+| **Off-center hero**: large, anchored low, bleeding across the seam | Maximalism, Cyberpunk, Pop art, Y2K, Graffiti |
+| **Photo per slide**: a different photo on each slide | Vector art, Collage, Pixel art, Swiss, Handwritten |
+| **Cropped hero + alternate angle** | Futuristic, Glassmorphism, Surreal, Victorian, Aurora |
 
-Glassmorphism connected carousel:
-
-![Glassmorphism carousel](docs/carousel-demo.png)
+The assistant mixes styles and layouts, so you can ask for "Swiss style with an off-center hero".
 
 ## Install
 

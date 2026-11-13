@@ -24,19 +24,42 @@
 
 ## 👀 معرض الأمثلة
 
-أمثلة هندسية محايدة؛ صورك وشعارك ونصوصك تحلّ مكان النصوص التجريبية.
+كل الأمثلة تصاميم محايدة بنصوص مؤقتة صنعها الـplugin بأدلة الستايلات والتخطيطات نفسها. صورك وشعارك ونصوصك تحلّ مكان المؤقت.
 
-| مينيمال · منتج على الحد | سايبربانك · منتج خارج المركز |
+### الستايلات العشرون (كاروسيل متصل من سلايدين)
+
+| | |
 |---|---|
-| ![مينيمال](docs/examples/minimalism-seam-hero.png) | ![سايبربانك](docs/examples/cyberpunk-offcenter.png) |
+| ![Minimalism](docs/examples/styles/minimalism.png)<br>**1. مينيمال** · منتج على الحد | ![Maximalism](docs/examples/styles/maximalism.png)<br>**2. ماكسيمال** · منتج خارج المركز |
+| ![Futuristic](docs/examples/styles/futuristic.png)<br>**3. مستقبلي** · منتج مقصوص + زاوية ثانية | ![Vector art](docs/examples/styles/vector-art.png)<br>**4. فيكتور** · صورة لكل سلايد |
+| ![Collage](docs/examples/styles/collage.png)<br>**5. كولاج** · صورة لكل سلايد | ![Retro](docs/examples/styles/retro.png)<br>**6. ريترو** · منتج على الحد |
+| ![Cyberpunk](docs/examples/styles/cyberpunk.png)<br>**7. سايبربانك** · منتج خارج المركز | ![Pop art](docs/examples/styles/pop-art.png)<br>**8. بوب آرت** · منتج خارج المركز |
+| ![Glassmorphism](docs/examples/styles/glassmorphism.png)<br>**9. زجاجي** · منتج مقصوص + زاوية ثانية | ![Clay](docs/examples/styles/clay.png)<br>**10. كلاي** · منتج على الحد |
+| ![Pixel art](docs/examples/styles/pixel-art.png)<br>**11. بيكسل** · صورة لكل سلايد | ![Editorial](docs/examples/styles/editorial.png)<br>**12. إديتوريال** · منتج على الحد |
+| ![Y2K](docs/examples/styles/y2k.png)<br>**13. Y2K** · منتج خارج المركز | ![Swiss](docs/examples/styles/swiss.png)<br>**14. سويسري** · صورة لكل سلايد |
+| ![Surreal](docs/examples/styles/surreal.png)<br>**15. سريالي** · منتج مقصوص + زاوية ثانية | ![Bohemian](docs/examples/styles/bohemian.png)<br>**16. بوهيمي** · منتج على الحد |
+| ![Victorian](docs/examples/styles/victorian.png)<br>**17. فيكتوري** · منتج مقصوص + زاوية ثانية | ![Graffiti](docs/examples/styles/graffiti.png)<br>**18. غرافيتي** · منتج خارج المركز |
+| ![Aurora](docs/examples/styles/aurora.png)<br>**19. أورورا** · منتج مقصوص + زاوية ثانية | ![Handwritten](docs/examples/styles/handwritten.png)<br>**20. خط يد** · صورة لكل سلايد |
 
-| سويسري · صورة لكل سلايد | ستوري · مساحة التصويت |
+### الستوري
+
+كل ستوري يترك الجزء السفلي الأوسط فارغًا لملصق التصويت في انستقرام. لا يُدمج ملصق مزيف داخل PNG.
+
+| | | | |
+|---|---|---|---|
+| ![مينيمال](docs/examples/stories/minimalism.png) | ![سايبربانك](docs/examples/stories/cyberpunk.png) | ![بوب آرت](docs/examples/stories/pop-art.png) | ![أورورا](docs/examples/stories/aurora.png) |
+| **مينيمال** | **سايبربانك** | **بوب آرت** | **أورورا** |
+
+### أنماط التخطيط
+
+| التخطيط | يظهر في |
 |---|---|
-| ![سويسري](docs/examples/swiss-photo-per-slide.png) | ![ستوري](docs/story-demo.png) |
+| **منتج على الحد** | مينيمال، كلاي، ريترو، إديتوريال، بوهيمي |
+| **منتج خارج المركز** يتجاوز الحد | ماكسيمال، سايبربانك، بوب آرت، Y2K، غرافيتي |
+| **صورة مختلفة لكل سلايد** | فيكتور، كولاج، بيكسل، سويسري، خط يد |
+| **منتج مقصوص + زاوية ثانية** | مستقبلي، زجاجي، سريالي، فيكتوري، أورورا |
 
-كاروسيل زجاجي متصل:
-
-![كاروسيل زجاجي](docs/carousel-demo.png)
+المساعد يمزج الستايلات والتخطيطات؛ يمكنك طلب «ستايل سويسري مع منتج خارج المركز».
 
 ## 🚀 ابدأ هنا: تثبيت، إعداد، تصميم
 
